@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Conservation & Deforestation Awareness</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #2c3e50, #27ae60);
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        html {
+    scroll-behavior: smooth;
+}
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+body {
+    animation: zoomIn 1s ease-out;
+}
+.read-more {
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+.read-more:hover {
+    color: #ffeb3b;
+    text-shadow: 0px 0px 10px rgba(255, 235, 59, 0.8);
+}
+
+
+
+
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, rgba(20, 50, 40, 0.8), rgba(10, 30, 20, 0.7));
+
+
+            padding: 15px 20px;
+        }
+        .navbar .brand {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .navbar .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        
+        .news, .article {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .news:hover, .article:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+        }
+
+    
+        .read-more {
+            color: #ffdd57;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            color: #ffd700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+        .home-btn {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .home-btn button {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .home-btn button:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">Ecoshield</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="map.html">Degraded areas</a>
+            <a href="groups.html">Groups</a>
+            <a href="payment.html">Donate</a>
+            <a href="aboutus.html">About us</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Latest News</h2>
+        <div class="news">
+            <strong>Amazon Rainforest Deforestation Hits Alarming Levels</strong>
+            <p>The Amazon rainforest has lost over 13,000 square kilometers due to illegal logging and fires...</p>
+            <p class="hidden">Experts warn that deforestation could lead to irreversible changes.</p>
+            <span class="read-more" onclick="toggleReadMore(this)">Read More</span>
+        </div>
+        <div class="news">
+            <strong>New Global Reforestation Initiative Launched</strong>
+            <p>A worldwide initiative to plant 1 billion trees over the next decade has been announced...</p>
+            <p class="hidden">This project will focus on areas most affected by deforestation, aiming to restore biodiversity and combat climate change.</p>
+            <span class="read-more" onclick="toggleReadMore(this)">Read More</span>
+        </div>
+        
+        <h2>Featured Articles</h2>
+        <div class="article">
+            <strong>The Importance of Forests</strong>
+            <p>Forests play a crucial role in climate regulation and biodiversity conservation...</p>
+            <p class="hidden">They absorb carbon dioxide, release oxygen, and support wildlife.</p>
+            <span class="read-more" onclick="toggleReadMore(this)">Read More</span>
+        </div>
+        <div class="article">
+            <strong>How to Reduce Deforestation</strong>
+            <p>Deforestation is a major issue, but there are ways individuals can contribute to its reduction...</p>
+            <p class="hidden">Using recycled products, supporting sustainable businesses, and reducing paper waste are simple but effective steps.</p>
+            <span class="read-more" onclick="toggleReadMore(this)">Read More</span>
+        </div>
+
+        <div class="home-btn">
+            <button onclick="goToHome()">Return to Home</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleReadMore(element) {
+            let hiddenText = element.previousElementSibling;
+            if (hiddenText.classList.contains("hidden")) {
+                hiddenText.classList.remove("hidden");
+                element.textContent = "Read Less";
+            } else {
+                hiddenText.classList.add("hidden");
+                element.textContent = "Read More";
+            }
+        }
+
+        function goToHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

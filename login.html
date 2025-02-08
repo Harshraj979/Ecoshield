@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Shield - Join Us</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(WhatsApp\ Image\ 2025-02-07\ at\ 1.27.36\ PM.jpeg)
+          no-repeat center center/cover;
+        font-family: "Arial", sans-serif;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .login-container {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        animation: fadeIn 1s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .eco-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #c1d45a;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #d1c743;
+        font-size: 1.8rem;
+      }
+
+      .info-text {
+        font-size: 1rem;
+        color: #e0e0e0;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: calc(100% - 20px);
+        padding: 12px;
+        margin: 10px 0;
+        border: 2px solid #c1d45a;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #d1c743;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .submit-btn {
+        background: linear-gradient(45deg, #c1d45a, #d1c743);
+        color: white;
+        padding: 12px;
+        border: none;
+        width: 90%;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: transform 0.2s, background 0.3s;
+      }
+
+      .submit-btn:hover {
+        background: linear-gradient(45deg, #f5d106, #caed06);
+        transform: scale(1.03);
+      }
+
+      .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .loading-text {
+        font-size: 2rem;
+        color: #c1d45a;
+        font-weight: bold;
+        animation: fadeIn 1s infinite alternate;
+      }
+
+      .show-loading {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .hide-login {
+        opacity: 0;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <div class="login-container" id="loginContainer">
+      <div class="eco-title">Eco Shield</div>
+      <h2>Join Our Community</h2>
+      <p class="info-text">
+        We’ll send you conservation news and updates on how you can protect
+        nature through activism, donating, events, and more.
+      </p>
+
+      <form id="loginForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="password" placeholder="password" required />
+
+        <button type="submit" class="submit-btn">Join Now</button>
+      </form>
+    </div>
+
+    <div class="loading-overlay" id="loadingScreen">
+      <div class="loading-text">Logging in...</div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); 
+
+          console.log(
+            "Form submitted! Hiding login box and showing loading screen..."
+          );
+
+        
+          document.getElementById("loginContainer").classList.add("hide-login");
+
+        
+          document
+            .getElementById("loadingScreen")
+            .classList.add("show-loading");
+
+          setTimeout(() => {
+            console.log("Redirecting to index.html...");
+            window.location.href = "index.html";
+          }, 2000);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protect Our Planet</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0b3d0b;
+        color: white;
+        background: linear-gradient(to right, #ff9f1c, #2ec486);
+      }
+
+      header {
+        background: linear-gradient(to right, #e07b1d, #1e8e67);
+
+        padding: 15px;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+      }
+      .nav-left {
+        margin-left: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .nav-right {
+        display: flex;
+        gap: 15px;
+      }
+      .nav-right li {
+        list-style: none;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 50px 20px;
+        background: url("forest.jpg") no-repeat center center/cover;
+      }
+
+      button {
+        background: grey;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+
+      .content-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        margin: 30px 0;
+        width: 40%;
+        max-width: 1200px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+      }
+
+      .left {
+        background: rgba(84, 86, 84, 0.325);
+        float: left;
+        margin-left: 5%;
+      }
+
+      .right {
+        background: rgba(84, 86, 84, 0.325);
+        float: right;
+        margin-right: 5%;
+        flex-direction: row-reverse;
+      }
+
+      .content-section img {
+        width: 50%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .content-text {
+        width: 45%;
+        padding: 20px;
+      }
+
+      footer {
+        clear: both;
+        text-align: center;
+        padding: 30px 20px;
+        background: linear-gradient(to right, #e07b1d, #1e8e67);
+        margin-top: 20px;
+      }
+      
+      .content-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+
+      
+      .content-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+     
+      button {
+        background: #4caf50;
+        color: white;
+        transition: all 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background: #45a049;
+        transform: scale(1.1);
+      }
+
+      
+      nav ul li a {
+        position: relative;
+        transition: color 0.3s ease-in-out;
+      }
+
+      nav ul li a:hover {
+        color: #f1c40f;
+      }
+
+      
+      @keyframes backgroundFade {
+        0% {
+          background-color: #0b3d0b;
+        }
+        50% {
+          background-color: #135213;
+        }
+        100% {
+          background-color: #0b3d0b;
+        }
+      }
+      body {
+        animation: backgroundFade 10s infinite alternate;
+      }
+
+      
+      .hero h1 {
+        font-size: 3rem;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        animation: glow 2s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+        to {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .content-section {
+          flex-direction: column !important;
+          text-align: center;
+          width: 95%;
+        }
+
+        .content-section img {
+          width: 100%;
+          height: auto;
+        }
+
+        .content-text {
+          width: 100%;
+          padding: 20px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-left">
+          <li class="website-name">Ecoshield</li>
+        </ul>
+        <ul class="nav-right">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="map.html">Degraded area</a></li>
+          <li><a href="groups.html">Helping groups</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <h1>Protect Our Planet's Lungs</h1>
+      <p>
+        Join us in the fight against deforestation and help safeguard our
+        forests.
+      </p>
+      <button onclick="donate()">Donate</button>
+    </section>
+
+    
+      <section id="impact" class="content-section left">
+        <div class="content-text">
+          <h2>Our Impact</h2>
+          <p>2.7M trees planted</p>
+        </div>
+        <img src="download.jpg" alt="Tree Planting" />
+      </section>
+
+    <section id="new-left-section" class="content-section left">
+      <div class="content-text">
+        <h2>How We Help</h2>
+        <p>We work with local communities to restore forests and wildlife.</p>
+      </div>
+      <img
+        src="StockCake-Community Forest Work_1738917082.jpg"
+        alt="Forest Restoration"
+      />
+    </section>
+
+    <section id="actions" class="content-section right">
+      <div class="content-text">
+        <h2>Forest Conservation</h2>
+        <p>Learn how we protect forests through conservation efforts.</p>
+      </div>
+      <video controls width="60%">
+        <source
+          src="WhatsApp Video 2025-02-07 at 1.54.47 PM.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section id="deforestation" class="content-section left">
+      <div class="content-text">
+        <h2>The Major Deforestation Fronts</h2>
+        <p>
+          Deforestation affects ecosystems worldwide. Take action to stop it.
+        </p>
+      </div>
+      <img
+        src="🌎 Ready for an Earth Day retreat in Howard County_ 🌳 Immerse yourself in a weekend filled with vibrant celebrations, eco-friendly activities, and community spirit! Discover all the details in our latest blog post.jpg"
+        alt="Deforestation Areas"
+      />
+    </section>
+
+    <section id="stats" class="content-section right">
+      <div class="content-text">
+        <h2>Over <span id="tree-loss-count">0</span> trees lost</h2>
+        <p>Every year, millions of trees disappear, impacting biodiversity.</p>
+      </div>
+      <img src="AdobeStock_899254473_Preview.jpeg" alt="Deforestation map" />
+    </section>
+
+    <footer>
+      <h2>Take Action Now</h2>
+      <p>Support our cause, become a volunteer, and stay updated.</p>
+    </footer>
+
+    <script>
+      function donate() {
+        window.location.href = "payment.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        function revealSections() {
+          const sections = document.querySelectorAll(".content-section");
+          sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+              section.classList.add("visible");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", revealSections);
+        revealSections(); 
+      });
+    
+      function animateCounter(id, start, end, duration) {
+        let obj = document.getElementById(id);
+        let startTime = null;
+
+        function updateCounter(timestamp) {
+          if (!startTime) startTime = timestamp;
+          let progress = timestamp - startTime;
+          let current = Math.min(
+            start + (progress / duration) * (end - start),
+            end
+          );
+
+          obj.innerText = Math.floor(current).toLocaleString(); 
+
+          if (current < end) {
+            requestAnimationFrame(updateCounter); 
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      }
+      document.addEventListener("scroll", function () {
+        const statsSection = document.getElementById("stats");
+        if (statsSection.getBoundingClientRect().top < window.innerHeight) {
+          animateCounter("tree-loss-count", 0, 59000000, 3000);
+        }
+      });
+    </script>
+  </body>
+</html>

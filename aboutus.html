@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Ecoshield</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #1e3c72, #2a5298);
+        color: white;
+        text-align: center;
+      }
+
+  
+      header {
+        background: linear-gradient(to right, #16222a, #3a6073);
+        padding: 20px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      
+      .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        padding: 8px 12px;
+      }
+
+      .nav-links a:hover {
+        color: #27ae60;
+        transform: scale(1.1);
+      }
+
+      
+      .about-container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1.5s forwards ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      
+      .team {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .team-member {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        width: 200px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .team-member:hover {
+        transform: scale(1.1);
+      }
+
+      .team-member img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      
+      .cta-button {
+        background: #27ae60;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .cta-button:hover {
+        background: #2ecc71;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>Ecoshield</header>
+
+    
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="payment.html">Donate</a>
+      <a href="map.html">Degraded areas</a>
+      <a href="groups.html">Helping Hands</a>
+      <a href="news.html">News</a>
+
+    </nav>
+
+    
+    <div class="about-container">
+      <h2>Our Mission</h2>
+      <p>
+        We are dedicated to fighting deforestation and promoting reforestation
+        worldwide.
+      </p>
+
+      <h2>Meet the Team</h2>
+      <div class="team">
+        <div class="team-member">
+          <h3>Harsh Raj</h3>
+          <p>Student</p>
+        </div>
+        <div class="team-member">
+          <h3>Hrisabh Singh</h3>
+          <p>Student</p>
+        </div>
+        <div class="team-member">
+          <h3>Ayush Tenguriya</h3>
+          <p>Student</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector(".cta-button")
+          .addEventListener("click", function () {
+            alert("Thank you for supporting our mission!");
+          });
+      });
+    </script>
+  </body>
+</html>
